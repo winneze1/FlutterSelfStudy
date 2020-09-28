@@ -135,6 +135,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           onPressed: () {
             this._onButtonShowModalSheet();
           },
+          backgroundColor: Theme.of(context).primaryColor,
         ),
         key: _scaffoldkey,
         body: SafeArea(
@@ -149,7 +150,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                     child: FlatButton(
                       onPressed: () {
                         this._onButtonShowModalSheet();
-
                         //display list
                         _scaffoldkey.currentState.showSnackBar(SnackBar(
                           content: Text(
@@ -159,9 +159,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                       },
                       child: Text(
                         'Insert',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(
+                            fontSize: 18, fontFamily: 'Permanent_Marker'),
                       ),
-                      color: Colors.pinkAccent,
+                      color: Theme.of(context).accentColor,
                       textColor: Colors.white,
                     ),
                   ),
